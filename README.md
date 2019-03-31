@@ -1,9 +1,11 @@
-# calculator-words
+# Calculator Words
 Find words that can be entered on a calculator (by turning the calculator upside down)
 
-My son recently won a basic calculator from the fair. We had a lot of fun entering some numbers and showing him how it would read like a word when you turned the calculator upside down. It took me back to my youth!
+My son recently won a basic calculator from the lcoal Fair. We had a lot of fun entering some numbers and showing him how it would read like a word when you turned the calculator upside down. It took me back to my youth!
 
-We looked on the internet for a few other examples words (including some rude ones of course!). But it crossed my mind that this would be the sort of thing that could easily be automated.
+We looked on the internet for a few other examples words (including some rude ones of course!). But it crossed my mind that this would be the sort of thing that could easily be automated. So here it is:
+
+![words](img/words.png)
 
 This is written in Python because i) it is an elegant language; and ii) it has good support for Sets and other collections which is what I needed; and iii) I was pretty sure I could get the main algorithm down a really short and concise set of set operations (which I did)
 
