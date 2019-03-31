@@ -11,9 +11,6 @@
 # The 'expand' option is needed to expand variations of words
 #
 
-
-from string import maketrans
-
 calculatorLetters = {
 	'o':'0',
 	'l':'1',
@@ -35,10 +32,10 @@ def isEncodable(x):
 
 # return the digits required to show the word (in reverse order)
 def encode(x):
-	return x.translate(maketrans(''.join(calculatorLetters.keys()), ''.join(calculatorLetters.values())))[::-1]
+	return x.translate(str.maketrans(''.join(calculatorLetters.keys()), ''.join(calculatorLetters.values())))[::-1]
 
 def encodeAndPrintIt(x):
-	print x + " -> " + encode(x)
+	print("%s -> %s" % (x, encode(x)))
 
 	
 
@@ -53,7 +50,7 @@ import sys
 # read a word at a time
 while True:
 	try:
-		line = raw_input()
+		line = input()
 	except EOFError:
 		break
 	for word in line.split():

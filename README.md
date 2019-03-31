@@ -7,11 +7,42 @@ We looked on the internet for a few other examples words (including some rude on
 
 ![words](img/words.png)
 
-This is written in Python because i) it is an elegant language; and ii) it has good support for Sets and other collections which is what I needed; and iii) I was pretty sure I could get the main algorithm down a really short and concise set of set operations (which I did)
+This is written in Python because i) it is an elegant language; and ii) it has good support for Sets and other collections which is what I needed; and iii) I was pretty sure I could get the main algorithm down a really short and concise set of set operations (which I did).
 
-It starts with a dictionary (in the Python sense) of the valid letters that a calculator can reproduce. Let's call this our 'calculatorLetters'. These are the letters that can be represented by entering digits and rotating the calculator screen.
+It starts with a dictionary (in the Python sense) of the valid letters that a calculator can reproduce. Let's call this our 'calculatorLetters'. These are the letters that can be represented by entering digits and rotating the calculator screen:
 
-The basic algorithm is to read through each word in the dictionary (I use the UNIX 'aspell' dictionary but any input word list will do) and see if this is can be encoded on our calculator. This is done by converting the candidate word to a set (i.e. discard any repeating letters, and we don't care about the order either). We then check if this is a subset of our encodable characters. If it is a subset, we know we can encode each letter. If there is even 1 letter that doesn't belong to our set of calculator letters then it isn't going to work and we move on the next word.
+```
+calculatorLetters = {
+'o':'0',
+'l':'1',
+'i':'1',
+'z':'2',
+'e':'3',
+'h':'4',
+'s':'5',
+'g':'6',
+'l':'7',
+'b':'8'
+}
+```
+
+The basic algorithm is to read through each word in the dictionary (I use the UNIX 'aspell' dictionary but any input word list will do) and see if this is can be encoded on our calculator. This is done by converting the candidate word to a set (i.e. discard any repeating letters, and we don't care about the order either).
+
+```
+# return the digits required to show the word (in reverse order)
+def encode(x):
+return x.translate(maketrans(''.join(calculatorLetters.keys()), ''.join(calculatorLetters.values())))[::-1]
+```
+
+We then check if this is a subset of our encodable characters. If it is a subset, we know we can encode each letter. If there is even 1 letter that doesn't belong to our set of calculator letters then it isn't going to work and we move on the next word.
+
+```
+# can a word be encoded on a calculator?
+def isEncodable(x):
+s1 = set(x);
+s2 = set(calculatorLetters.keys());
+return s1.issubset(s2)
+```
 
 If we do find words that will work on our calculator, all that is left is to encode the word as a series of numbers (by looking up each letter in our 'calculatorLetters' map) and print it to the screen (remember the digits need to reversed...)
 
@@ -20,9 +51,20 @@ I've included a list of words that I could find using my english, french and ger
 Overall, it isn't a complex program, but it gave me a refresher in Python (dictionaries, sets etc) and it very satisfying to see how short and elegant the program can be in Python.
 
 
-To run the program (assuming you have 'aspell' and 'unaccent' installed):
+The program reads possible words from the standard input. You can type in some random words to see it in action:
 
+```
+$ python list-words.py 
+hello
+hello -> 07734
+goodbye
+```
+
+To run the program using a dictionary as input (assuming you have 'aspell' and 'unaccent' installed):
+
+```
 aspell -d fr dump master | aspell -l fr expand | unaccent ISO-8859-1 | python list-words.py | sort
+```
 
 Note how this uses the 'expand' feature of aspell to list all variations of words, and also strips out any messy accented characters using the 'unaccent' program (you won't need this for English words, but you will for French and German, otherwise the list of matching words starts to shrink too much). If you have another dictionary - or just a list of words in a file - you can pipe any content into the program. I don't assume a new word per line - it anyway splits the input lines into separate words.
 
