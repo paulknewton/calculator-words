@@ -31,17 +31,17 @@ The basic algorithm is to read through each word in the dictionary (I use the UN
 ```
 # return the digits required to show the word (in reverse order)
 def encode(x):
-    return x.translate(maketrans(''.join(calculatorLetters.keys()), ''.join(calculatorLetters.values())))[::-1]
+    return x.translate(str.maketrans(''.join(calculator_letters.keys()), ''.join(calculator_letters.values())))[::-1]
 ```
 
 We then check if this is a subset of our encodable characters. If it is a subset, we know we can encode each letter. If there is even 1 letter that doesn't belong to our set of calculator letters then it isn't going to work and we move on the next word.
 
 ```
 # can a word be encoded on a calculator?
-def isEncodable(x):
+def is_encodable(x):
     s1 = set(x);
-    s2 = set(calculatorLetters.keys());
-    return s1.issubset(s2)
+    s2 = set(calculator_letters.keys());
+    return s1.issubset)
 ```
 
 If we do find words that will work on our calculator, all that is left is to encode the word as a series of numbers (by looking up each letter in our 'calculatorLetters' map) and print it to the screen (remember the digits need to reversed...)
@@ -54,7 +54,7 @@ Overall, it isn't a complex program, but it gave me a refresher in Python (dicti
 The program reads possible words from the standard input. You can type in some random words to see it in action:
 
 ```
-$ python list-words.py 
+$ python calc_words.py 
 hello
 hello -> 07734
 goodbye
@@ -63,9 +63,11 @@ goodbye
 To run the program using a dictionary as input (assuming you have 'aspell' and 'unaccent' installed):
 
 ```
-aspell -d fr dump master | aspell -l fr expand | unaccent ISO-8859-1 | python list-words.py | sort
+aspell -d fr dump master | aspell -l fr expand | unaccent ISO-8859-1 | python calc_words.py | sort
 ```
 
 Note how this uses the 'expand' feature of aspell to list all variations of words so we get the maximum amount of combinations, and also strips out any messy accented characters using the 'unaccent' program (you won't need this for English words, but you will for French and German, otherwise the list of matching words starts to shrink too much). If you have another dictionary - or just a list of words in a file - you can pipe any content into the program. I don't assume a new word per line either - it anyway splits the input lines into separate words.
+
+Some unit tests packaged as well. Just run these with pytest.
 
 Have fun!
