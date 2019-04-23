@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/paulknewton/calculator-words.svg?branch=master)](https://travis-ci.org/paulknewton/calculator-words)
 # Calculator Words
 Find words that can be entered on a calculator (by turning the calculator upside down)
 
