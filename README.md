@@ -1,4 +1,7 @@
 [![Build Status](https://travis-ci.org/paulknewton/calculator-words.svg?branch=master)](https://travis-ci.org/paulknewton/calculator-words)
+
+[![DeepSource](https://static.deepsource.io/deepsource-badge-light.svg)](https://deepsource.io/gh/paulknewton/calculator-words/?ref=repository-badge)
+
 # Calculator Words
 Find words that can be entered on a calculator (by turning the calculator upside down)
 
