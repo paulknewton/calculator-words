@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/paulknewton/calculator-words.svg?branch=master)](https://travis-ci.org/paulknewton/calculator-words)
+[![codecov](https://codecov.io/gh/paulknewton/calculator-words/branch/master/graph/badge.svg)](https://codecov.io/gh/paulknewton/calculator-words)
 
 [![DeepSource](https://static.deepsource.io/deepsource-badge-light.svg)](https://deepsource.io/gh/paulknewton/calculator-words/?ref=repository-badge)
 
