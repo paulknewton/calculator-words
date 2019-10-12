@@ -1,7 +1,7 @@
-[![Build Status](https://travis-ci.org/paulknewton/calculator-words.svg?branch=master)](https://travis-ci.org/paulknewton/calculator-words)
-[![codecov](https://codecov.io/gh/paulknewton/calculator-words/branch/master/graph/badge.svg)](https://codecov.io/gh/paulknewton/calculator-words)
+[![Build Status](https://travis-ci.org/paulknewton/calculator_words.svg?branch=master)](https://travis-ci.org/paulknewton/calculator_words)
+[![codecov](https://codecov.io/gh/paulknewton/calculator_words/branch/master/graph/badge.svg)](https://codecov.io/gh/paulknewton/calculator_words)
 
-[![DeepSource](https://static.deepsource.io/deepsource-badge-light.svg)](https://deepsource.io/gh/paulknewton/calculator-words/?ref=repository-badge)
+[![DeepSource](https://static.deepsource.io/deepsource-badge-light.svg)](https://deepsource.io/gh/paulknewton/calculator_words/?ref=repository-badge)
 
 # Calculator Words
 Find words that can be entered on a calculator (by turning the calculator upside down)
