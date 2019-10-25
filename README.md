@@ -1,9 +1,9 @@
-[![Build Status](https://travis-ci.org/paulknewton/calculator_words.svg?branch=master)](https://travis-ci.org/paulknewton/calculator_words)
-[![codecov](https://codecov.io/gh/paulknewton/calculator_words/branch/master/graph/badge.svg)](https://codecov.io/gh/paulknewton/calculator_words)
-[![pyup](https://pyup.io/repos/github/paulknewton/calculator_words/shield.svg)](https://pyup.io/account/repos/github/paulknewton/calculator_words)
-[![python3](https://pyup.io/repos/github/paulknewton/calculator_words/python-3-shield.svg)](https://pyup.io/account/repos/github/paulknewton/calculator_words)
+[![Build Status](https://travis-ci.org/paulknewton/calculator-words.svg?branch=master)](https://travis-ci.org/paulknewton/calculator-words)
+[![codecov](https://codecov.io/gh/paulknewton/calculator-words/branch/master/graph/badge.svg)](https://codecov.io/gh/paulknewton/calculator-words)
+[![pyup](https://pyup.io/repos/github/paulknewton/calculator-words/shield.svg)](https://pyup.io/account/repos/github/paulknewton/calculator-words)
+[![python3](https://pyup.io/repos/github/paulknewton/calculator-words/python-3-shield.svg)](https://pyup.io/account/repos/github/paulknewton/calculator-words)
 
-[![DeepSource](https://static.deepsource.io/deepsource-badge-light.svg)](https://deepsource.io/gh/paulknewton/calculator_words/?ref=repository-badge)
+[![DeepSource](https://static.deepsource.io/deepsource-badge-light.svg)](https://deepsource.io/gh/paulknewton/calculator-words/?ref=repository-badge)
 
 # Calculator Words
 Find words that can be entered on a calculator (by turning the calculator upside down)
